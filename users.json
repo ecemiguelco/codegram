@@ -1,0 +1,25 @@
+[
+  {
+    "user": "Miguel",
+    "firstName": "",
+    "lastName": "",
+    "follower": [],
+    "following": [],
+    "email": "admin@domain.com",
+    "password": "admin_Password_1"
+  },
+
+  { "user": "Jiachi", "firstName": "", "lastName": "", "follower": [], "following": [], "email": "", "password": "" },
+
+  {
+    "user": "layla.sql",
+    "firstName": "",
+    "lastName": "",
+    "follower": [],
+    "following": [],
+    "email": "",
+    "password": ""
+  },
+
+  { "user": "Pradeep", "firstName": "", "lastName": "", "follower": [], "following": [], "email": "", "password": "" }
+]

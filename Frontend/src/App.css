@@ -1,0 +1,485 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+body {
+  background-color: black;
+  color: white;
+  font-family: rubik;
+}
+
+hr {
+  border: 0.5px solid rgba(69, 72, 76, 0.3);
+  width: 100%;
+  margin: auto;
+}
+
+body::-webkit-scrollbar {
+  width: 0.8em;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(76, 76, 76);
+  outline: 1px solid rgb(76, 76, 76);
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.title {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1rem;
+  display: flex;
+}
+
+.title > a {
+  text-decoration: none;
+  color: white;
+  font-weight: 800;
+}
+
+.navigation {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: black;
+  /* max-width: 467px; */
+  /* min-width: 280px; */
+}
+
+.navigation > a {
+  text-decoration: none;
+  color: white;
+}
+
+.navigation a:hover {
+  text-decoration: none;
+  color: lightskyblue;
+  cursor: pointer;
+}
+
+.myProfilePicNavigtaion {
+  width: 2.2rem;
+  border-radius: 100%;
+  padding: 0.05rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.navPicContainer {
+  width: 2.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.myProfilePicNavigtaion:hover {
+  border: 1px solid lightskyblue;
+}
+.initialMsgsContainer {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.initialMsgs {
+  text-align: center;
+}
+
+.postContainer {
+  margin-bottom: 1.5rem;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.postMainContainer {
+  border-radius: 1rem;
+  max-width: 460px;
+  min-width: 460px;
+  height: max-content;
+}
+
+@media only screen and (max-width: 467px) {
+  .postMainContainer {
+    min-width: 100%;
+  }
+}
+
+.postHeader {
+  height: 40px;
+  max-width: inherit;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.postImageContainer {
+  max-height: max-content;
+  min-width: 280px;
+  min-height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.postUserPic {
+  height: 2rem;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.headerImgContainer {
+  height: max-content;
+  width: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0.5rem;
+}
+
+.postUserName {
+  font-size: 1rem;
+}
+
+.postImage {
+  max-width: 100%;
+  width: auto;
+  max-height: inherit;
+
+  border-radius: 3px;
+}
+
+.postCaption {
+  /* border: 1px solid white; */
+  min-height: auto;
+  max-height: max-content;
+  padding: 0.5rem;
+}
+
+.postCaption > p {
+  font-size: 1em;
+}
+
+.newPostForm {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  max-width: 467px;
+  min-width: 280px;
+}
+
+.postCaptionInput {
+  max-width: 467px;
+  min-width: 280px;
+  height: 3rem;
+  padding: 1rem;
+}
+
+.postImageInput {
+  min-width: 280px;
+  height: 3rem;
+  padding: 1rem;
+}
+
+.newPostButton {
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.userPageProfPic {
+  max-width: 8rem;
+  min-width: 5rem;
+}
+
+.userPageProfilePic {
+  max-width: 8rem;
+  min-width: 5rem;
+  border-radius: 100%;
+}
+
+.userPageHeader {
+  max-width: 100%;
+  min-width: 280px;
+  padding: 0 2rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.userPageDetName {
+  font-size: 1.2rem;
+}
+
+.userPageDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.userPageNameAndFollow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.userPageDetPoFoFo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+}
+
+.numPosts {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.noInDetails {
+  font-weight: 800;
+}
+.postDetDisplay {
+  font-weight: 400;
+}
+
+.postDisplayContainer {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.postDisplays {
+  max-width: 780px;
+  min-width: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  gap: 1rem;
+}
+
+.mainPostDispInUserPage {
+  max-width: 240px;
+  min-width: 240px;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  border: 0.5px solid rgba(69, 72, 76, 0.4);
+}
+
+.userPostImage {
+  max-width: 240px;
+  max-height: 240px;
+  aspect-ratio: auto;
+}
+
+.inputForSearchPage {
+  background-color: rgb(61, 63, 63, 0.5);
+  color: rgba(249, 249, 249, 0.7);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+
+.searchPageContainer {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 3rem;
+}
+
+.searchedUserContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.searchedUserPicContainer {
+  max-width: 7rem;
+}
+
+.searchedUserPic {
+  width: 100%;
+  border-radius: 100%;
+}
+
+.searchedUserName {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.suggestedUserLabel {
+  text-align: center;
+}
+
+.followingButton {
+  padding: 0.4rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modalContainer {
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 700px;
+  max-height: max-content;
+}
+
+.bgClickModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  backdrop-filter: blur(5px);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.postModal {
+  /* overflow-y: scroll; */
+  background-color: black;
+  border: 1px solid rgba(249, 249, 249, 0.7);
+  border-radius: 5px;
+  padding: 1rem;
+  min-width: 280px;
+  width: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.modalCaption {
+  max-height: max-content;
+}
+.modalImage {
+  min-width: 265px;
+  max-width: 100%;
+  max-height: 680px;
+}
+
+.commentSection {
+  display: flex;
+  flex-flow: column;
+  gap: 1rem;
+  min-height: min-content;
+  max-height: 12rem;
+  width: 100%;
+  /* border: 1px solid rgba(249, 249, 249, 0.7); */
+  border-radius: 10px;
+  padding: 1rem;
+  background-color: rgb(41, 39, 39, 0.7);
+}
+
+.commentsContainer {
+  overflow-y: scroll;
+  flex-flow: column;
+  display: flex;
+  gap: 1.5rem;
+  padding: 0.5rem 0;
+}
+
+.commentsContainer::-webkit-scrollbar {
+  width: 0.1em;
+}
+
+.commentsContainer::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.commentsContainer::-webkit-scrollbar-thumb {
+  background-color: rgb(76, 76, 76);
+  outline: 1px solid rgb(76, 76, 76);
+}
+
+.commentsBox {
+  display: flex;
+  gap: 0.5rem;
+  min-height: min-content;
+  /* border: 1px solid rgba(249, 249, 249, 0.7); */
+  border-radius: 5px;
+}
+
+.commentUserContainer {
+  width: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.commentUserPic {
+  width: 100%;
+  border-radius: 100%;
+}
+
+.commentText {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.commentInput {
+  line-height: 1rem;
+  width: 100%;
+  border: 1px solid rgba(249, 249, 249, 0.7);
+  border-radius: 5px;
+  padding: 0.5rem;
+}

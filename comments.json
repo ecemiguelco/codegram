@@ -1,0 +1,20 @@
+[
+  {
+    "userID": "Miguel",
+    "postID": "mysecondpost",
+    "chronoId": "1",
+    "text": "Comment 1"
+  },
+  {
+    "userID": "Miguel",
+    "postID": "mysecondpost",
+    "chronoId": "2",
+    "text": "Comment 2"
+  },
+  {
+    "userID": "Miguel",
+    "postID": "mysecondpost",
+    "chronoId": "3",
+    "text": "Comment 3"
+  }
+]
