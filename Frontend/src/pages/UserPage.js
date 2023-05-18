@@ -14,7 +14,6 @@ const updateFollowers = async (user) => {
 };
 
 function UserPage() {
-  const BASE_URL = "http://localhost:42069/";
   let { profilename } = useParams();
 
   const [mainUser, setMainUser] = useState({});
