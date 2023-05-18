@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { NavLink } from "react-router-dom";
-
+import { BASE_URL } from "../services/services";
 function CommentsList({ user, identifier }) {
-  const BASE_URL = "http://localhost:42069/";
   const [commentList, setCommentList] = useState([]);
   const [commentText, setCommentText] = useState("");
   const [getComments, setGetComments] = useState(false);

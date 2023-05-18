@@ -2,11 +2,10 @@ import React, { useState, useEffect } from "react";
 import { NavLink, useParams } from "react-router-dom";
 import axios from "axios";
 import CommentsList from "./CommentsList";
-
+import { BASE_URL } from "../services/services";
 function Modal() {
   const { profilename, postname } = useParams();
   const [selectedPost, setSelectedPost] = useState({});
-  const BASE_URL = "http://localhost:42069/";
 
   useEffect(() => {
     if (!selectedPost.identifier) {

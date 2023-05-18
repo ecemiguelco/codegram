@@ -1,9 +1,9 @@
 import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import Posts from "../components/Posts";
+import { BASE_URL } from "../services/services";
 
 function Home() {
-  const BASE_URL = "http://localhost:42069/";
   const [postListOfFollowing, setPostListOfFollowing] = useState([]);
   const [mainUser, setMainUser] = useState({});
   const [followedUsersFitler, setFollowedUsers] = useState([]);

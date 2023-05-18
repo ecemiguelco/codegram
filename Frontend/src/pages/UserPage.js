@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import PostDispay from "../components/PostDispay";
 import { Outlet } from "react-router-dom";
 import axios from "axios";
-const BASE_URL = "http://localhost:42069/";
+import { BASE_URL } from "../services/services";
 
 const updateFollowers = async (user) => {
   try {

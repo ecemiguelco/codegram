@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
-
+import { BASE_URL } from "../services/services";
 function SearchPage() {
-  const BASE_URL = "http://localhost:42069/";
   const [userList, setUserList] = useState([]);
   const [myUser, setMyUser] = useState({});
   const [selectedUser, setSelectedUser] = useState(null);

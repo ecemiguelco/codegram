@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-
+import { BASE_URL } from "../services/services";
 let newPost = {
   user: "Miguel",
   identifier: "",
@@ -15,7 +15,6 @@ let newPost = {
 const regex = /^images\//;
 
 function NewPost() {
-  const BASE_URL = "http://localhost:42069/";
   const [postList, setPostList] = useState([]);
   const [postCaption, setPostCaption] = useState(newPost.caption);
   const [postImageLink, setPostImageLink] = useState(newPost.image);
